@@ -1,0 +1,13 @@
+img {
+    width: 100%;
+    display: block;
+}
+
+.navbar-brand-nopadding {
+    padding: 0;
+    width: 100px;
+}
+
+.container-small {
+    width: 500px;
+}

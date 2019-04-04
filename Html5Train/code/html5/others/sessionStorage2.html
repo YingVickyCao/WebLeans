@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 localStorage</title>
+</head>
+<body>
+
+    <!-- 对用户在当前 session 中访问页面的次数进行计数. 关闭浏览器窗口, 重置计数器 -->
+    <script type="text/javascript">
+
+        // check if browser support
+        if (typeof (Storage) != "undefined") {
+
+            if (sessionStorage.pagecount) {
+                sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;
+            }
+            else {
+                sessionStorage.pagecount = 1;
+            }
+            document.write("Visits: " + sessionStorage.pagecount + " time(s).");
+        }
+        else {
+            alert("抱歉！您的浏览器不支持 Web Storage ...");
+        }
+
+    </script>
+</body>
+</html>

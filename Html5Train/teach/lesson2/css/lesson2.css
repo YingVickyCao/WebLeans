@@ -1,0 +1,6 @@
+body{
+    border: 1px solid red;
+
+    /* 修改为10px -> 200px后，刷新Chrome，有时没有作用。重新在新窗口中展示，生效*/
+    height: 200px;
+}

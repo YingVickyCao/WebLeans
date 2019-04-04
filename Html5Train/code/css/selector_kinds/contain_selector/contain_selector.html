@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css contain_selector 包含选择符</title>
+
+    <style type="text/css">
+        /*包含选择符 */
+        /* 对 div 或 p 没有定义， 仅仅对 在 div 中的 p 定义 */
+        div p{
+            background-color: lawngreen;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>段落</p>
+    <div style="border: #31b0d5 2px solid">
+        <p>段落</p>
+        <p>段落2</p>
+        <h3>title 3 level</h3>
+    </div>
+</body>
+</html>

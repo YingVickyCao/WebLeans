@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- https://v3.bootcss.com/getting-started/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/dailyNews.css">
+
+    <script src="js/dailyNews.js"></script>
+    <script src="js/jquery-2.2.1.min.js"></script>
+</head>
+
+<!-- 作为事件处理程序引入JS -->
+<body onload="hello()">
+    <div class="header">
+        <h5>热门文章</h5>
+    </div>
+    <div class="nav">
+        <ul class="clearf">
+            <li class="dailyTop">日榜</li>
+            <li class="weekTop">周榜</li>
+        </ul>
+        <hr>
+    </div>
+    <!-- https://v3.bootcss.com/ -->
+    <div class="newList" id="dailyTop">
+        <!-- TODO：float -->
+        <div class="clearf">
+            <span class="index">1</span>
+            <span class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa cum deserunt dolorem earum eos, ex inventore, maxime nam natus nisi provident, quibusdam repudiandae unde voluptatum. Fuga mollitia perferendis voluptatibus?</span>
+            <span class="author">A</span>
+        </div>
+        <div class="clearf">
+            <span class="index">2</span>
+            <span class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa cum deserunt dolorem earum eos, ex inventore, maxime nam natus nisi provident, quibusdam repudiandae unde voluptatum. Fuga mollitia perferendis voluptatibus?</span>
+            <span class="author">B</span>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <!--<img src="img/3x/client.png" alt="" onclick="hello()">-->
+                <img src="img/3x/client.png" alt="" onclick="showFirstPage()">
+                <!-- TODO: div 和p 是分标签吗？ 为什么 【首页】和【我的】可以在在同一行？ -->
+                <p>首页</p>
+            </li>
+
+            <li>
+                <!-- 作为事件处理程序引入 -->
+                <img src="img/3x/my_info.png" alt="" onclick="toMe()">
+                <!-- 用<SCRIPT> … </SCRIPT>标记引入 -->
+                <!--<img src="img/3x/my_info.png" alt="" onclick="alert('Go'), window.location.href='me.html'">-->
+                <p>我的</p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <a href="me.html">测试超链接</a>
+        <br>
+        <!-- 在跳转之前，先执行某些操作 -->
+        <a href="javascript:alert('Go'), window.location.href='me.html'">测试超链接</a>
+    </div>
+
+    <!-- TODO:Hide -->
+    <div id="foobar" onclick="$(' .foobar').hide('slow')">
+        <div>foobar</div>
+        <div id="foo"></div>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        alert($("div .index").size());
+        alert($(".index + .title:last").size());
+
+        // $(' .footer img:first').attr({src: "img/3x/common_question.png"});
+
+        // TODO:text VS html
+        // $("p").text("Hello world!");
+        // $("p").text("<span>Hello world!</span>");
+        // $("p").html("<span>Hello world2!</span>");
+    });
+
+    function showFirstPage() {
+        // $(' .footer img:first').attr({src: "img/3x/common_question.png"});
+        if ($(' .footer img:first').attr("src") == 'img/3x/common_question.png') {
+            $(' .footer img:first').attr({src: "img/3x/client.png"});
+        } else {
+            $(' .footer img:first').attr({src: "img/3x/common_question.png"});
+        }
+    }
+
+    /**
+     $(document).ready(function () {
+        alert("DOM Ready");
+        alert($("div").index($('#foobar')[0])) // 0  id=foobar
+        alert($("div").index($('#foo')[0])) // 2
+        alert($("div").index($('#fo'))) // -1 找不到
+        alert($("div").index($('#fo')[0])) // -1 找不到  => 0
+    });
+     **/
+
+    /**
+     <!-- 页面载入 -->
+     // document 元素变成一个对象
+     // CSS选择器一致。还支持特殊的方式
+     $(document).ready(function () {
+        alert("DOM Ready");
+    });
+
+     $(function () {
+        alert("DOM Ready2");
+    });
+     **/
+
+    function hello() {
+        console.log("function hello ==========>")
+        // alert("Say hello");
+
+        // 日期对象Date
+        // alert(new Date().getFullYear());
+        // alert(new Date().getMonth() + 1);
+        // alert(new Date().getDate());
+
+        // alert(2018-4-15) Today
+        // var date = new Date();
+        // var fullData = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+        // alert(fullData);
+
+        // console.log(new Date().getFullYear());
+        // console.log(new Date().getUTCFullYear());
+        // console.log(new Date().getMonth());
+        // console.log(new Date().getUTCMonth());
+        // console.log(new Date().getDate());
+        // console.log(new Date().getUTCFullYear());
+
+        /**
+         // 循环打印split数组
+         // var 只要根据定义时=后面的格式来确定是哪种数据类型
+         var str = "This is a string";
+         // console.log(str.indexof('tring',1));
+         console.log(str.split(' '));
+         console.log(str.split(' ').length);
+         var array = str.split(' ');
+         **/
+
+        /**
+         // 一直打印，界面卡死
+         // for (var i = 0; array.length; i++) {
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+        console.log("function hello <==========");
+        **/
+
+        /*var flag = window.confirm("Sure delete?");
+        console.log(flag);
+
+        var flag = window.confirm("Sure delete?");
+        console.log(flag);*/
+    }
+
+    /*
+    window.onload(new function () {
+        alert("Onload");
+    });
+
+    window.onload = function () {
+        alert("Onload2");
+    };*/
+
+    // function toMe() {
+    //     alert("Go")
+    //     window.location.href = "me.html";
+    // }
+
+    // http://www.w3school.com.cn/jsref/met_win_settimeout.asp
+    // setInterval(function () {
+    //     console.log(new Date())
+    // }, 1000);
+</script>
+</html>

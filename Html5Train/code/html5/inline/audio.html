@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 audio</title>
+</head>
+<body>
+
+    <!-- http://www.w3school.com.cn/html5/html_5_audio.asp -->
+    <h1>mp3</h1>
+    <audio src="../res/audio/song.mp3" controls="controls">Your browser does not support the audio element.</audio>
+    <br>
+    <hr>
+
+    <h1>ogg</h1>
+    <audio src="../res/audio/song.ogg" controls="controls">Your browser does not support the audio element.</audio>
+    <br>
+    <hr>
+
+    <h1>必须含有`controls="controls"`属性，否则，不会显示播放界面。</h1>
+    <audio src="../res/audio/song.ogg">Your browser does not support the audio element.</audio>
+    <hr>
+
+
+    <h1>audio 元素允许多个 source 元素。source 元素可以链接不同的音频文件。浏览器将使用第一个可识别的格式：</h1>
+    <audio controls="controls">
+        <!-- type 可以省略 -->
+        <!--<source src="res/audio/song.mp3" type="audio/mpeg">-->
+        <!--<source src="res/audio/song.ogg" type="audio/ogg">-->
+
+        <source src="../res/audio/song.mp3">
+        <source src="../res/audio/song.ogg">
+        Your browser does not support the audio tag.
+    </audio>
+    <hr>
+
+    <h1>autoplay</h1>
+    <audio src="../res/audio/song.mp3" controls="controls" autoplay="autoplay">Your browser does not support the audio
+        element.
+    </audio>
+    <hr>
+
+    <h1>loop</h1>
+    <audio src="../res/audio/song.mp3" controls="controls" loop="loop">Your browser does not support the audio element.
+    </audio>
+    <hr>
+
+    <h1>muted</h1>
+    <audio src="../res/audio/song.ogg" controls="controls" muted="muted">Your browser does not support the audio element.
+    </audio>
+    <hr>
+
+    <h1>preload</h1>
+    <audio controls="controls" preload="none">
+        <source src="../res/audio/song.ogg" type="audio/ogg"/>
+        <source src="../res/audio/song.mp3" type="audio/mpeg"/>
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>

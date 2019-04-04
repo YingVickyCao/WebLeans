@@ -1,0 +1,25 @@
+body{
+    /* */
+    /*display: inline-block;*/
+    /*display: block;*/
+}
+
+/* 类选择器*/
+/* .表示是一个类*/
+.header{
+    color: red;
+}
+
+/* .表示是一个类*/
+
+.green{
+    color:green;
+}
+
+#header{
+    color: red;
+}
+
+#green{
+    color:green;
+}

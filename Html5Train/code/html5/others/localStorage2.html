@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 localStorage</title>
+</head>
+<body>
+
+    <!-- 用户访问页面的次数进行计数。 关闭浏览器窗口, 计数仍然存在 -->
+    <script type="text/javascript">
+
+        // check if browser support
+        if (typeof (Storage) != "undefined") {
+
+
+            if (localStorage.pagecount) {
+                localStorage.setItem("pagecount", Number(localStorage.getItem("pagecount")) + 1);
+                // localStorage.pagecount = Number(localStorage.pagecount) + 1;
+            }
+            else {
+                localStorage.setItem("pagecount", 1);
+                // localStorage.pagecount = 1;
+            }
+            // document.write("Visits: " + localStorage.pagecount + " time(s).");
+            document.write("Visits: " + localStorage.getItem("pagecount") + " time(s).");
+        }
+        else {
+            alert("抱歉！您的浏览器不支持 Web Storage ...");
+        }
+
+    </script>
+</body>
+</html>

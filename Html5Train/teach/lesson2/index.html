@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- CSS的使用方式1： -->
+    <!-- 先引入normalize， 这样border的边框就对其全屏了 -->
+    <!-- 三种选择器，标签选择器 -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/lesson2.css">
+
+    <!-- CSS的使用方式2： -->
+    <style type="text/css">
+        <!--
+        id 选择器
+
+        -->
+        #div1 {
+            border: 1px solid green;
+            height: 100px;
+            font: 10pt "微软雅黑";
+        }
+
+        #div2 {
+            border: 1px solid orangered;
+            height: 20px;
+            font: 10pt "宋体";
+        }
+
+        /* 儿子*/
+        /*body 下面所有的div被选中 */
+        body div {
+        }
+
+        /* 孙子*/
+        /*body div的所有阶段 */
+        body > div {
+        }
+
+    </style>
+
+</head>
+<body>
+    <form autocomplete="on">
+        <input type="text" list="citylist">
+        <datalist id="citylist">
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="xiamen">厦门</option>
+        </datalist>
+    </form>
+
+    <div id="div1">微软雅黑</div>
+    <div id="div2">宋体</div>
+
+    <!-- CSS的使用方式3： -->
+    <div style="height: 100px; background-color: orange;">在Div中使用style</div>
+    <br>
+
+    <div style="height: 100px; background-color: orange;width:150px">在Div中使用style</div>
+
+    <div style="height: 100px; background-color: green;width:50%; float: left;">在Div中使用style</div>
+
+    <div style="height: 100px; background-color: green;width:150px; float: right">在Div中使用style</div>
+
+    <!-- clear 清除浮动， both=左右不能在它头上。这样它会在下一行显示 -->
+    <!--<div style="background: orangered ; height: 30px; "></div>-->
+    <div style="background: orangered ; height: 30px; clear: both;"></div>
+
+</body>
+</html>

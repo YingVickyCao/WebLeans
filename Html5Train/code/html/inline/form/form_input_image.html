@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form - image</title>
+</head>
+<body>
+
+    <!-- http://www.w3school.com.cn/tags/att_input_type.asp -->
+    <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image-->
+    <form action="../../others/demo.html" method="get" name="input">
+        <!-- Request URL: http://localhost:63342/Html5Train/code/html/others/demo.html?submit.x=40&submit.y=19-->
+        <input type="image"
+               src="../../../img/eg_logo_w3school.gif"
+               alt="Submit"
+               name="submit">
+        <br>
+
+        <!-- Request URL: http://localhost:63342/Html5Train/code/html/others/demo.html?x=107&y=53-->
+        <input id="image2"
+               type="image"
+               src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+               alt="Login"
+               width="200"
+               height="100">
+
+        <br>
+    </form>
+
+
+    <form>
+        <p>Login to your account</p>
+        <div>
+            <label for="userId">User ID</label>
+            <input type="text" id="userId" name="userId">
+        </div>
+        <div>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd">
+        </div>
+        <div>
+            <input id="image" type="image"
+                   src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+                   alt="Login" width="100">
+        </div>
+    </form>
+
+</body>
+</html>

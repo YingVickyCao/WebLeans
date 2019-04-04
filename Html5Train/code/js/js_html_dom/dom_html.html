@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript HTML DOM - 改变 HTML</title>
+</head>
+<body>
+
+    <p id="p1">Hello !</p>
+
+    <img id="image" src="../../res/img/bg.jpeg">
+    <br/>
+
+
+    <script type="text/javascript">
+
+        // 改变 HTML 输出流
+        document.write(new Date());
+
+        // 改变 HTML 内容
+        document.getElementById("p1").innerHTML="World!";
+
+        // 改变 HTML 属性
+        document.getElementById("image").src="../../res/img/shanghai_lupu_bridge.jpg";
+
+    </script>
+
+
+</body>
+</html>

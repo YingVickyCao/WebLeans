@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>page3</title>
+
+    <style type="text/css">
+
+        #div2 {
+            width: 200px;
+            height: 180px;
+            background-color: lightblue;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 1)	编写脚本输出HELLO WORLD到页面，添加按钮，值为测试，点击按钮弹出上海市浦东软件园职业技能培训中心。-->
+    <input type="button" name="name" value="测试" onclick="pop()"/>
+
+    <!-- 2)	新建段落，id为p1, 内容为JavaScript 是世界上最流行的脚本语言。 新建两个span,里面的值分别为jQuery 是一个 JavaScript 库，jQuery 极大地简化了 JavaScript 编程。编写脚本要求能获取段落和Span里面的内容输出到网页。-->
+    <p id="p1">JavaScript 是世界上最流行的脚本语言</p>
+    <span>jQuery 是一个 JavaScript 库</span>
+    <span>jQuery 极大地简化了 JavaScript 编程</span>
+
+    <!--3)	新建DIV区域，id为div1, 区域里面新建段落，id为p2, 内容是这个一个段落.要求编写脚本动态增加一个段落到div1里面，段落内容为这是一个新的段落。-->
+    <div id="div1">
+        <p id="p2">这个一个段落</p>
+    </div>
+
+    <!--4)	新建DIV区域，id为div2,宽度为200px，高度为180px，背景颜色为lightblue.要求编写脚本描述鼠标经过和移出事件，鼠标按下和松开事件，分别改变区域内文本为鼠标经过区域，鼠标离开区域，鼠标被按下，鼠标松开。其中鼠标按下的时候，区域颜色变为#C0C0C0。-->
+    <div id="div2"
+         onmousemove="mOver(this)"
+         onmouseout="mOut(this)"
+         onmousedown="mDown(this)"
+         onmouseup="mUp(this)">
+    </div>
+
+    <!--5)	新建DIV区域，id为div3, 接着添加两个段落，内容分别为：HTML DOM 定义了访问和操作 HTML 文档的标准方法, DOM 将 HTML 文档表达为树结构。 要求编写脚本获取div3区域里面的所有段落，输出内容和段落的个数，最后输出段落的父级元素。-->
+    <div id="div3">
+        <p>HTML DOM 定义了访问和操作 HTML 文档的标准方法</p>
+        <p>DOM 将 HTML 文档表达为树结构</p>
+    </div>
+    <hr/>
+
+    <script type="text/javascript">
+        // 1)	编写脚本输出HELLO WORLD到页面，添加按钮，值为测试，点击按钮弹出上海市浦东软件园职业技能培训中心。
+        document.writeln('HELLO WORLD');
+
+        function pop() {
+            alert('上海市浦东软件园职业技能培训中心');
+        }
+
+        <!-- 2)	新建段落，id为p1, 内容为JavaScript 是世界上最流行的脚本语言。 新建两个span,里面的值分别为jQuery 是一个 JavaScript 库，jQuery 极大地简化了 JavaScript 编程。编写脚本要求能获取段落和Span里面的内容输出到网页。-->
+        document.writeln(window.document.getElementById('p1').innerHTML + "<br />");
+        document.writeln(window.document.getElementsByTagName('span')[0].innerHTML + "<br />");
+        document.writeln(window.document.getElementsByTagName('span')[1].innerHTML + "<br />");
+
+        <!--3)	新建DIV区域，id为div1, 区域里面新建段落，id为p2, 内容是这个一个段落.要求编写脚本动态增加一个段落到div1里面，段落内容为这是一个新的段落。-->
+        // 方式1：
+        // var para = document.createElement('p');
+        // var node = document.createTextNode('这是一个新的段落');
+        // para.appendChild(node);
+        // document.getElementById('div1').appendChild(para);
+
+        // 方式2：
+        var para = document.createElement("p");
+        para.innerHTML = '这是一个新的段落';
+        document.getElementById("div1").appendChild(para);
+
+        <!--4)	新建DIV区域，id为div2,宽度为200px，高度为180px，背景颜色为lightblue.要求编写脚本描述鼠标经过和移出事件，鼠标按下和松开事件，分别改变区域内文本为鼠标经过区域，鼠标离开区域，鼠标被按下，鼠标松开。其中鼠标按下的时候，区域颜色变为#C0C0C0。-->
+        function mOver(obj) {
+            obj.innerHTML = "鼠标经过区域";
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "鼠标离开区域";
+        }
+
+        function mDown(obj) {
+            obj.style.backgroundColor = "#C0C0C0";
+            obj.innerHTML = "鼠标被按下";
+        }
+
+        function mUp(obj) {
+            obj.innerHTML = "鼠标松开";
+        }
+
+        <!--5)	新建DIV区域，id为div3, 接着添加两个段落，内容分别为：HTML DOM 定义了访问和操作 HTML 文档的标准方法, DOM 将 HTML 文档表达为树结构。 要求编写脚本获取div3区域里面的所有段落，输出内容和段落的个数，最后输出段落的父级元素。-->
+        /*var x = document.getElementById("div3").getElementsByTagName("p");
+        document.write("首个段落元素的内容为: " + x[0].firstChild.nodeValue
+            + ",<br />第二段的 innerHTML 是: " + x[1].innerHTML
+            + ",<br />p元素的个数是: " + x.length
+            + ",<br />p元素的父元素为: " + x[0].parentNode.nodeName);*/
+
+
+        var elements = document.getElementById("div3").getElementsByTagName("p");
+        // 输出内容
+        console.log(elements[0].firstChild);
+        console.log(elements[0].firstChild.nodeValue);
+        console.log(elements[0].innerHTML); // innerHTML = firstChild.nodeValue
+        document.writeln("<br/> 第1个段落元素的内容为：" + elements[0].firstChild.nodeValue);
+        document.writeln("<br/> 第2个段落元素的内容为：" + elements[1].innerHTML);
+
+        // 段落的个数
+        var len = elements.length;
+        console.log(len);
+        document.writeln("<br/> 段落的个数：" + len)
+
+        // 段落的父级元素
+        var parentName = elements[0].parentNode.nodeName;
+        console.log(parentName);
+        document.writeln("<br/> 段落的父级元素：" + parentName)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 video</title>
+</head>
+<body>
+
+    <h1>ogg</h1>
+    <video src="../res/video/movie.ogg" controls="controls">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>mpu</h1>
+    <video src="../res/video/movie.mp4" controls="controls">
+        your browser does not support the video tag
+    </video>
+    <hr></hr>
+
+
+    <h1>autoplay </h1>
+    <video src="../res/video/movie.mp4" controls="controls" autoplay="autoplay">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>height,width</h1>
+    <video src="../res/video/movie.mp4" controls="controls" width="600px" height="400px" style="background: red">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>loop</h1>
+    <video src="../res/video/movie.mp4" controls="controls" loop="loop">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>muted</h1>
+    <video src="../res/video/movie.mp4" controls="controls" muted="muted">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>poster</h1>
+    <video src="../res/video/movie.mp4" controls="controls" poster="../../img/eg_logo_w3school.gif">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>preload</h1>
+    <video src="../res/video/movie.mp4" controls="controls" preload="auto">
+        your browser does not support the video tag
+    </video>
+    <hr>
+
+    <h1>video 元素允许多个 source 元素。source 元素可以链接不同的音频文件。浏览器将使用第一个可识别的格式：</h1>
+    <video controls="controls">
+        <!-- type 可以省略 -->
+        <source src="../res/video/movie.ogg" type="video/ogg">
+        <source src="../res/video/movie.mp4" type="video/mp4">
+        your browser does not support the video tag
+    </video>
+
+</body>
+</html>

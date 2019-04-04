@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css word-wrap</title>
+</head>
+<body>
+
+    <p>
+        This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and
+        wrap to the next line.
+    </p>
+
+    <!-- 只在允许的断字点换行（浏览器保持默认处理）。-->
+    <p style="word-wrap:normal; border:1px solid #000000; width:11em">
+        This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and
+        wrap to the next line.
+    </p>
+
+    <!-- 在长单词或 URL 地址内部进行换行。-->
+    <p style="word-wrap:break-word; border:1px solid #000000; width:11em">
+        This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and
+        wrap to the next line.
+    </p>
+
+</body>
+</html>

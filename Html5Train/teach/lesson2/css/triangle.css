@@ -1,0 +1,16 @@
+.triangle {
+    background: transparent;
+    height: 0px;
+    width: 0px;
+    /*border: 30px solid red;*/
+    /*border-top: 30px solid yellow;*/
+    /*border-left: 30px solid chartreuse;*/
+    /*border-bottom: 30px solid red;*/
+    /*border-right: 30px solid rebeccapurple;*/
+
+    border-top: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid green;
+    border-right: 30px solid transparent;
+}
+

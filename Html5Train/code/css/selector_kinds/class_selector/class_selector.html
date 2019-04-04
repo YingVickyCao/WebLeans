@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css class selector CSS 类选择器
+    </title>
+
+    <style type="text/css">
+
+        /* 省略HTML标记的类选择符是最常用的CSS方法,因为方便的在任意元素上套用预先定义好的类样式 */
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        /* 元素基于它们的类而被选择 */
+        /* 类名为 red 的 h2  => 类型为h2 && 类名为 red */
+        h2.red {
+            background: royalblue;
+        }
+
+        /* TODO: class 被用作派生选择器 */
+        /*.green p {*/
+            /*background: #985f0d;*/
+        /*}*/
+
+        /* p 且 类名为 right  => p元素 && 类名为right */
+        p.right {
+            text-align: right;
+        }
+
+        p.center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="red">A</p>
+    <button class="red">Button</button>
+    <p class="red">C</p>
+    <p class="green">B</p>
+
+    <h2>h2</h2>
+    <!--元素基于它们的类而被选择-->
+    <h2 class="red">h2</h2>
+
+    <p class="right">right</p>
+    <p class="center">center</p>
+
+    <!-- 同时使用多个样式 -->
+    <p class="red center">red center</p>
+
+</body>
+</html>

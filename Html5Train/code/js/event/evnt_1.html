@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js event</title>
+</head>
+<body>
+
+    <!-- 当用户在 <h1> 元素上点击时，会改变其内容： -->
+    <h1 onclick="this.innerHTML='已点击'">点击</h1>
+
+    <!--从事件处理器调用一个函数-->
+    <h1 onclick="changeText(this)">点击</h1>
+
+    <!--HTML 事件属性-->
+    <!-- 使用事件属性, 向 HTML 元素分配 事件 -->
+    <h1 onclick="changeText2()" id="demo">点击</h1>
+
+    <h1 onclick="changeText3()" id="demo2">点击</h1>
+
+    <!-- 使用 HTML DOM 来分配事件 -->
+    <!-- HTML DOM 允许您通过使用 JavaScript 来向 HTML 元素分配事件：-->
+
+
+    <script type="text/javascript">
+        function changeText(id) {
+            id.innerHTML = "已点击";
+        }
+
+        function changeText2() {
+            document.getElementById("demo").innerHTML = "已点击";
+        }
+
+        function changeText3() {
+            document.getElementById("demo2").innerHTML = "已点击";
+        }
+
+        document.getElementById("demo2").onclick = function () {
+            changeText3();
+        }
+    </script>
+
+</body>
+</html>

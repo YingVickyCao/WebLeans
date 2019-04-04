@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS id 选择器 </title>
+
+    <style type="text/css">
+
+        #red{
+            color: red;
+        }
+
+        #green{
+            color: #00ff00;
+        }
+
+        /* id 选择器常常用于建立派生选择器 */
+        /* id 选择器作为派生选择器也可以被使用很多次 */
+
+        /* id 为 green && 元素是p */
+        #green p{
+            background: #0f0f0f;
+        }
+
+        /* id 为 green && 元素是button */
+        #green button{
+            background: #985f0d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p id="red">红色</p>
+    <!--<p id="red">红色</p>-->
+
+    <div id="green">绿色
+        <p>段落</p>
+
+        <button type="button">button</button>
+        <br>
+
+        <h2>h2</h2>
+    </div>
+</body>
+</html>

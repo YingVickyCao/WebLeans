@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 - input - email</title>
+</head>
+<body>
+
+    <button onclick="addEmail()">Add Emails</button>
+    <br>
+    <br>
+
+    <input id="firstEmail" type="email" value="first.w3c@example.com">
+    <br>
+    <button onclick="readFirstEmailInfo()"> Read first email info</button>
+    <p id="showReadFirstEmailInfo"></p>
+    <br>
+
+    <script type="text/javascript">
+        function addEmail() {
+
+            var x = document.createElement("INPUT")
+            x.setAttribute("type", "email");
+            x.setAttribute("value", "w3c@example.com");
+            document.body.appendChild(x);
+        }
+
+        function readFirstEmailInfo() {
+            var x = document.getElementById("firstEmail");
+            document.getElementById("showReadFirstEmailInfo").innerHTML = x.value;
+        }
+    </script>
+
+</body>
+</html>

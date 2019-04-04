@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js var</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var x = 2;
+        var y = 3;
+        var z = x + y;
+        document.writeln(z);
+        document.writeln("<br/>");
+
+        var pi = 3.14;
+        var name = "A";
+        var answer = 'Yes I am!';
+
+        document.write(pi + "<br/>");
+        document.write(name + "<br/>");
+        document.write(answer + "<br/>");
+
+        //Value = undefined
+        var carname;
+        document.write(carname + "<br/>");
+
+        var carname2 = "Volvo";
+        var carname2;
+        document.write(carname2 + "<br/>");
+
+        // 变量类型随所存信息不同可发生改变
+        var num = "bignum";
+        console.log(num);
+        num = 100;
+        console.log(num);
+
+        // JavaScript 数字
+        // JavaScript 只有一种数字类型。数字可以带小数点，也可以不带：
+        var x1 = 34.00;      //使用小数点来写
+        var x2 = 34;
+        console.log(x1);
+        console.log(x2);
+
+        // JavaScript 数组
+        var cars = new Array();
+        cars[0] = "A";
+        cars[1] = "B";
+        cars[2] = "C";
+        console.log(cars);
+
+        var cars2 = new Array("A", "B", "C");
+        console.log(cars2);
+
+        // JavaScript 对象
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            id: 100
+        };
+        console.log(person);
+        // 对象属性有两种寻址方式：
+        var name = person.lastName;
+        console.log(name);
+        name = person["firstName"];
+        console.log(name);
+    </script>
+
+</body>
+</html>

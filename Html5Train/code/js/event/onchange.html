@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js onchange</title>
+</head>
+<body>
+
+    <!-- 当您离开输入字段时，会触发将输入文本转换为大写的函数。-->
+    <input type="text" id="fname" onchange="changeUpperCase()">
+
+    <script type="text/javascript">
+        function changeUpperCase() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toLocaleUpperCase();
+        }
+    </script>
+</body>
+</html>

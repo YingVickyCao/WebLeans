@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style type="text/css">
+
+        #p1 {
+            color: blue;
+            font-weight: bold;
+            font-family: 黑体, 华文行楷, 微软雅黑;
+            font-size: 2em;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .p2 {
+            text-decoration: underline;
+            line-height: 30px;
+            text-indent: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid gray;
+            margin: 20px 10px;
+        }
+
+        #block1 {
+            float: left;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+        }
+
+        #block2 {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            border: 2px solid blue;
+            width: 150px;
+            height: 150px;
+        }
+
+        .waper {
+            width: 200px;
+            height: 200px;
+            border: 1px dotted red;
+            margin: 100px;
+        }
+
+        .waper1 {
+            transform: rotate(30deg);
+        }
+
+        .waper2 {
+            transform: skew(30deg);
+        }
+
+        .waper3:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        .waper4 {
+            position: relative;
+            left: 50px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--1)	新建段落id为p1，内容为上海市浦东软件园职业技能培训中心，接着写CSS样式改变字体颜色为蓝色，并且加粗，字体变为黑体,华文行楷,微软雅黑,大小变为2em-->
+    <p id="p1">上海市浦东软件园职业技能培训中心</p>
+
+    <!--2)	新建标题(h3)和段落，标题内容为测试，居中显示。段落内容为上海浦东郭守敬路498号浦东软件园1号楼,要求编写类选择器(p2)给该段落使用，样式为段落带有下划线，行高30px,文本缩进20px。-->
+    <h3>测试</h3>
+    <p class="p2">上海浦东郭守敬路498号浦东软件园1号楼 </p>
+
+    <!--3)	新建两个DIV标签，内容分别为BOX1和BOX2， 要求编写样式控制所有的DIV元素的宽度和高度设置为300px,内边距设置为10px,边框设置为1px solid gray,外边距设置为20px 10px-->
+    <div class="box">BOX1</div>
+    <div class="box">BOX2</div>
+
+    <!--4)	新建两个DIV标签，id分别为block1和block2，内容分别为浮动定位和绝对定位.编写样式控制block1标签左浮动，边框为2px red solid, 宽度和高度为150px; 控制block2绝对定位，距离上边缘为200px,距离左边缘为300px, 边框为2px blue solid, 宽度和高度为150px.-->
+    <div id="block1">浮动定位</div>
+    <div id="block2">绝对定位</div>
+
+    <!--5)	新建四个标签，宽度和高度是200px, 边框是1px dotted red, 外边距是100x. 内容分别是旋转盒子30度，扭曲盒子30度，鼠标经过时盒子缩小(比例为x:0.5,y:0.5)，下移盒子(位移x方向50px,y方向100px)。编写样式达到如上效果。-->
+    <div class='waper waper1'>旋转盒子30度</div>
+    <div class='waper waper2'>扭曲盒子30度</div>
+    <div class='waper waper3'>鼠标经过时盒子缩小(比例为x:0.5,y:0.5)</div>
+    <div class='waper waper4'>下移盒子(位移x方向50px,y方向100px)</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form 表单</title>
+</head>
+<body>
+
+    <h1>文本域(Text fields)</h1>
+    <h1>method &equals; get</h1>
+    <!-- TODO: form -->
+    <!-- Request URL: https://www.baidu.com/?Name=A&ID=100&Submit=Submit
+         Request Method: GET
+     -->
+    <!-- method = get 时，虽然https://www.baidu.com/?Name=A&ID=100&Submit=Submit 不存在，但仍然能跳转成功 -->
+    <!--<form action="https://www.baidu.com/" method="get">-->
+    <form action="https://www.baidu.com/">
+        <p>Name:</p>
+        <input type="text" name="Name" value="A">
+        <br>
+
+        <p>Id:</p>
+        <input type="text" name="ID" value="100">
+        <br>
+
+        <input type="submit" name="Submit">
+
+    </form>
+    <br>
+    <hr>
+
+    <h1>method &equals; post</h1>
+    <!-- Request URL: https://www.baidu.com/
+         Request Method: POST
+         FormData: Name=B&ID=200&Submit=Submit
+            Name: B
+            ID: 200
+            Submit: Submit
+    -->
+    <!-- method = post 时，https://www.baidu.com/?Name=A&ID=100&Submit=Submit 不存在，不能跳转成功 -->
+    <form action="https://www.baidu.com/" method="post">
+        <p>Name:</p>
+        <input type="text" name="Name" value="B">
+        <br>
+
+        <p>Id:</p>
+        <input type="text" name="ID" value="200">
+        <br>
+
+        <input type="submit" name="Submit">
+
+    </form>
+    <hr>
+
+
+    <h1>method &equals; default</h1>
+    <!-- Request URL: https://www.baidu.com/?Name=A&ID=100
+         Request Method: GET
+     -->
+    <form action="https://www.baidu.com/">
+        <p>Name:</p>
+        <input type="text" name="Name" value="A">
+        <br>
+
+        <p>Id:</p>
+        <input type="text" name="ID" value="100">
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

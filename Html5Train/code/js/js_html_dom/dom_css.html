@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM CSS</title>
+</head>
+<body>
+
+    <p id="p2">Hello World!</p>
+
+    <button type="button" onclick=" ChangeColorClick()">变颜色</button>
+    <input type="button" value="Show" onclick="showBtnClick()">
+    <input type="button" value="hide" onclick="hideBtnClick()">
+
+    <script type="text/javascript">
+        // 改变 HTML 样式
+        document.getElementById("p2").style.color = "#ff0000";
+
+        function  ChangeColorClick() {
+            document.getElementById("p2").style.color = "#00ff00";
+        }
+
+        function showBtnClick() {
+            document.getElementById("p2").style.visibility = "visible"
+        }
+
+        function hideBtnClick() {
+            document.getElementById("p2").style.visibility = "hidden"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 - input - range</title>
+</head>
+<body>
+
+    <p>0 ~ 100</p>
+    <input id="rangeInput" type="range">
+    <br>
+    <button onclick="getRangeValue()">get range value</button>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        function getRangeValue() {
+            document.getElementById("demo").innerHTML = document.getElementById("rangeInput").value;
+        }
+    </script>
+</body>
+</html>

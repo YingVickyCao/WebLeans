@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 sessionStorage</title>
+</head>
+<body>
+
+    <button type="button" onclick="showClickCounter()">
+        Click
+    </button>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        function showClickCounter() {
+            if (typeof (Storage) != "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+
+                document.getElementById("result").innerHTML = sessionStorage.clickcount;
+            }
+            else {
+                alert("抱歉！您的浏览器不支持 Web Storage ...");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

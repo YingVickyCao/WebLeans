@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 框模型 (Box Model)</title>
+
+    <style type="text/css">
+        div {
+            background-color: red;
+
+            height: 70px;
+            width: 70px;
+
+            line-height: 70px;
+            text-align: center;
+
+            /* “90 * 90” = width * padding * 2 + border *2 = 70 + 5 * 2 + 5 *2 = 80 =  背景 */
+            padding: 5px;
+            border: #00FF00 5px solid;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>123456</p>
+    <div>
+        div
+    </div>
+</body>
+</html>

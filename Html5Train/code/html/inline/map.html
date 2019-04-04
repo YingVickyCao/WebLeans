@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map 图片地图</title>
+</head>
+<body>
+
+    <h1>图片地图</h1>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map -->
+    <p>
+        <map name="primary">
+            <area shape="circle" coords="75,75,75" href="../inline/sup.html">
+            <area shape="circle" coords="275,75,75" href="../inline/sub.html">
+        </map>
+        <img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+    </p>
+    <p>
+        <map id="mps" name="mps">
+            <area shape="rect" coords="0,0,50,50" href="https://www.baidu.com/" alt="baidu"/>
+        </map>
+        <img src="../../img/map_placehold.png" alt="350 x 150 pic" usemap="mps"/>
+    </p>
+
+</body>
+</html>

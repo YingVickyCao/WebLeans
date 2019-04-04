@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css padding 内边距</title>
+
+    <style type="text/css">
+        p {
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 把段落的内边距设置为父元素 width 的 10% -->
+    <p style="padding: 10px">段落1</p>
+    <hr>
+
+    <!-- 按照上、右、下、左的顺序分别设置各边的内边距，各边均可以使用不同的单位或百分比值 -->
+    <p style="padding: 10px 0.25em 2ex 20%;">段落2</p>
+    <!-- 等价于-->
+    <p style="padding-top: 10px;  padding-right: 0.25em;  padding-bottom: 2ex;  padding-left: 20%;">段落2</p>
+</body>
+</html>

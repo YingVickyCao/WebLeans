@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- en 并不影响显示中文-->
+<html lang="en">
+<!-- head 机器看的-->
+<head>
+    <!-- 字符集-->
+    <meta charset="UTF-8">
+    <!-- 人可以看 ，当时最初的目的是给机器看的，用于检索-->
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<!-- 人看的-->
+<body>
+
+    <!-- html5,start  -->
+    <!-- -->
+    <input type="a" autofocus="true">
+
+
+    <!-- Search -->
+    <input type="search">
+
+
+    <!-- mark -->
+    <p>
+        <mark>Mark</mark>
+    </p>
+
+    <p>
+        <ruby></ruby>
+    </p>
+
+    <!-- html5,end  -->
+
+
+    <!-- Form 表单 -->
+    <form action="http://www.baidu.com/" method="get">
+        <!-- 为什么有name舒心不够？哪个输入框输入的是什么东西 -->
+        <label>用户名</label>
+        <input type="text" name="name">
+        <br>
+
+
+        <label>手机号</label>
+        <textarea name="phone" id="" cols="11" rows="1"></textarea>
+    </form>
+
+    <!-- 开发中一般用post，不用get。  -->
+    <!-- 为什么有get？ 因为很早以前有些东西用post实现不了-->
+    <form action="http://www.baidu.com/" method="post">
+        <label>用户名</label>
+        <input type="text" name="name">
+    </form>
+
+    <from>
+        <input type="text"><br>
+        <input type="button"><br>
+        <input type="checkbox"><br>
+        <input type="radio"><br>
+        <input type="file"><br>
+        <input type="hidden"><br>
+        <input type="password"><br>
+        <input type="text" placeholder="Please input name">
+        <!-- -> action 属性-->
+        <input type="submit">
+    </from>
+
+
+    <!-- 链接 + Img -->
+    <!-- _blank 最常用：使用新tab打开  -->
+    <p><a href="http://www.baidu.com/" target="_blank">点击我，跳转到百度</a></p>
+    <p><a href="http://www.baidu.com/"> <img src="image/baidu_logo.gif" alt="Jump"></a></p>
+    <!-- 拉伸太大，不符合比例，可能会失真  -->
+    <p><a href="http://www.baidu.com/"> <img src="image/baidu_logo.gif" alt="Jump" height="20px" width="70px"></a></p>
+    <p><a href="test.html"> 点击我，跳转到test.html</a></p>
+    <!-- 链接锚点 -->
+    <p><a href="test.html#mao"> 点击我，跳转到test.html的锚点</a></p>
+
+    <!-- 邮箱-->
+    <hr>
+
+    <!-- 有的字符不生效，就要用转移字符  -->
+    <p> A B</p>
+    <p>&nbspA&nbspB</p>
+    <p>>A>B</p>
+    <p>&gtA&gtB</p>
+    <hr>
+
+    <!-- ################################################ -->
+    <!-- 什么颜色？-->
+    <!-- 使用取色器知道什么颜色-->
+    <!-- id 不能重复 -->
+    <!-- class 可以重复 -->
+    <p>Architecto ASSUMENDA <span style="color: red">使用span 突出某些字体</span> cumque expedita incidunt</p>
+    <div class="header">
+        <p>Architecto ASSUMENDA 使用span 突出某些字体 cumque expedita incidunt</p>
+    </div>
+    <div id="header">
+        <p>Architecto ASSUMENDA 使用span 突出某些字体 cumque expedita incidunt</p>
+    </div>
+    <!-- 哪一个精确使用哪一个-->
+    <p class="green">Architecto ASSUMENDA <span class="header">使用span 突出某些字体</span> cumque expedita incidunt</p>
+
+    <!-- 哪一个精确使用哪一个-->
+    <p>Architecto ASSUMENDA <span id="green" class="header">使用span 突出某些字体</span> cumque expedita incidunt</p>
+    <hr>
+    <!-- ################################################ -->
+
+    <p>下阶字符 <sub>a</sub></p>
+    <hr>
+
+    <p>上阶字符<sup>a</sup></p>
+    <hr>
+
+    <ins>下划线</ins>
+    <hr>
+
+    <del>删除线</del>
+    <hr>
+
+    <cite>参考文献引用</cite>
+    <hr>
+
+    <!-- abbr 缩写-->
+    <abbr title="">缩写</abbr>
+    <hr>
+
+    <!-- 无序列表 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <hr>
+
+    <!-- ol有序列表 -->
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <hr>
+
+    <!-- dl自定义列表 -->
+    <dl>
+        <!-- dt序号 -->
+        <dt>首页</dt>
+        <!-- dd描述 -->
+        <dd>A</dd>
+
+        <dt>商品</dt>
+        <dd>B</dd>
+
+        <dt>电器</dt>
+        <dd>C</dd>
+    </dl>
+
+    <h1>Hello</h1>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ASSUMENDA consequatur cumque expedita incidunt
+        iste, laudantium libero nemo neque nisi possimus tempora! Animi deserunt ducimus nostrum ullam! Assumenda,
+        consectetur, voluptatum?</h1>
+    <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid amet autem culpa ea, exercitationem facilis id
+        laborum laudantium libero maiores modi quas repellat saepe tempore ullam veniam! Mollitia, tenetur?</em>
+
+    <!-- 大段文字用p-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolorem et fugiat harum ipsam iste iure nobis quidem
+        recusandae sed? Aliquam eveniet modi unde. Atque consequatur non optio quas sapiente.</p>
+
+
+    <div>
+        <!-- block　可以设置宽和高，超过时拖动-->
+        <block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eligendi iusto maxime, quibusdam repellat
+            ut voluptate voluptatum. Alias aliquid eaque enim et, fugiat id labore laborum minus omniibusdam repellat ut
+            voluptate voluptatum. Alias aliquid eaque enim et, fugiat id labore laborum minus omnisibusdam repellat ut
+            voluptate voluptatum. Alias aliquid eaque enim et, fugiat id labore laborum minus omniss reiciendis
+            velit.?12354455
+        </block>
+    </div>
+
+    <!-- span不能设置宽和高，内容是多高就多高-->
+    <span>01</span>
+    <span>235</span>
+
+    <span>01</span>
+    <!--换行符-->
+    <br>
+    <span>235</span>
+
+    <!-- 分割线-->
+    <hr>
+
+    <span>235</span>
+
+    <!-- src，图片路径，alt，如果照片显示不全了，说明-->
+    <img src="image/Lighthouse.png" alt="图片">
+    <!-- 一个点表示上一级，两个点表示上上级，以及类推-->
+    <img src="./image/Lighthouse.png" alt="图片">
+</body>
+</html>

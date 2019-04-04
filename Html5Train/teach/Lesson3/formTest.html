@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.2.1.min.js"></script>
+</head>
+<body>
+
+    <form action="" name="form1">
+        <label for="username">User Name</label>
+        <!-- 提示： 用户名已经用过了 -->
+        <!--<input type="text" id="username" onchange="change()" placeholder="Please input">-->
+        <input type="text" id="username" placeholder="Please input" onchange="submitInfo()">
+
+        <label for="password">Password</label>
+        <input type="password" id="password">
+
+        <input type="submit">
+    </form>
+</body>
+
+<script type="text/javascript">
+
+    // 不能在onclick()中,请求数据，因为onClick会重新刷新界面。所以，可以看到Network中返回了tsconfig.json，但又马上消失了。
+    // 放在onchange()中就没有问题。
+    // 输入数据，然后移动鼠标，就会出现console log。
+    // 输入数据，然后按回车键，界面会刷新，所以，不会出现console log。
+    function submitInfo() {
+        // alert("Submit");
+        /**
+         * // TODO:打印action地址 = 本机地址
+         console.log(window.document.forms[0].action);
+         console.log(window.document.forms['form1'].action);
+         console.log(window.document.forms['form1'].action='change()');
+         **/
+
+        // 在新窗口中打开
+        // window.open("me.html")
+        $.ajax({
+            type: "POST",
+            url: "tsconfig.json",
+            // data: "name=John&location=Boston",
+            success: function (msg) {
+                alert("Data Saved: " + msg);
+                alert(eval(msg).name);
+
+                console.log("123");
+                console.log(msg);
+                console.log(eval(msg).name);
+                // alert(eval(msg).toString());
+
+                // var response = eval(msg);
+                // var names = response.names;
+                // var input = window.document.getElementById('username').value;
+                // console(input);
+            }
+        });
+    }
+
+    function change() {
+        // alert("Change");
+        // alert(window.document.getElementById('username').value);
+        // $.ajax({
+        //     type: "POST",
+        //     url: "tsconfig.json",
+        //     data: "name=John&location=Boston",
+        //     success: function (msg) {
+        //         alert("Data Saved: " + msg);
+        //         alert(eval(msg));
+        //     }
+        // });
+    }
+</script>
+</html>
