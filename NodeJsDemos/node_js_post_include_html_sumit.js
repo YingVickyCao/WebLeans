@@ -2,6 +2,16 @@ var http = require('http');
 var url = require("url");
 var querystring = require('querystring');
 
+/**
+ * node node_js_post_include_html_sumit.js
+ * http://localhost:7777/login
+ * 
+ *  Request Method: POST
+    FormData:
+    name: ga
+    pwd: 2
+ */
+
 var postHTML =
   '<html><head><meta charset="utf-8"><title>菜鸟教程 Node.js 实例</title></head>' +
   '<body>' +
@@ -35,13 +45,6 @@ http.createServer(function (req, res) {
     console.log("body[\"name\"]:" + body["name"]);
     console.log("body.pwd:" + body.pwd);
 
-    /**
-     // http://localhost:8888/login
-      Request Method: POST
-     FormData:
-      name: ga
-      pwd: 2
-     */
     if (pathname == '/login') {
       if (body.name && body.pwd) {
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf8' });
@@ -66,7 +69,7 @@ http.createServer(function (req, res) {
     res.end();
     console.log("<===============");
   });
-}).listen(8888);
+}).listen(7777);
 
 // Ref
 // https://blog.csdn.net/u011146511/article/details/79876976

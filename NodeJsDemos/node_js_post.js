@@ -1,7 +1,10 @@
 var http = require('http');
 var url = require("url");
 var querystring = require('querystring');
-
+/**
+ * node node_js_post.js
+ * http://localhost:8888/login
+ */
 http.createServer(function (req, res) {
     var body = "";
     //请求链接
